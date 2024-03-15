@@ -21,17 +21,24 @@ $Dark-Blue: hsl(218, 23%, 16%);
 .container {
     background: $Dark-Blue;
     height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 
     #advice {
-        width: 450px;
+        width: 650px;
         text-align: center;
         background: hsl(217, 19%, 24%);
         padding: 2rem;
         border-radius: 10px;
         box-shadow: hsl(218, 23%, 16%) 0px 8px 24px;
+
+        @media only screen and (max-width: 666px) {width: 80%;}
+        // @media only screen and (max-width: 452px) {
+            
+        // }
+
         h1 {
             color: $Light-Cyan;
             margin: 2rem;
@@ -43,7 +50,7 @@ $Dark-Blue: hsl(218, 23%, 16%);
             color: $Light-Cyan;
             color: $Neon-Green;
             letter-spacing: 4px;
-            font-weight: 600;
+            // font-weight: 600;
             // margin-bottom: rem;
             &::before {
                 content: "ADVICE  #";
@@ -52,11 +59,30 @@ $Dark-Blue: hsl(218, 23%, 16%);
         
         }
         .switch {
+            position: relative;
+            bottom: -83px;
             display: block;
             margin: 1rem auto;
-            filter: $Neon-Green;
-            cursor: pointer;
-        }
+            width: 70px;
+            height: 70px;
+            background: $Neon-Green;
+            border-radius: 9999px;
+            &:hover {
+                box-shadow: 0px 0px 20px 2px $Neon-Green;
+                cursor: pointer;
+                
+            }       
 
+            svg {
+                position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+            }      
+        }
     }
 }
+
+
+
