@@ -34,10 +34,19 @@ $Dark-Blue: hsl(218, 23%, 16%);
         border-radius: 10px;
         box-shadow: hsl(218, 23%, 16%) 0px 8px 24px;
 
+        .img-mob {
+            display: none;
+        }
+
         @media only screen and (max-width: 666px) {width: 80%;}
-        // @media only screen and (max-width: 452px) {
-            
-        // }
+        @media only screen and (max-width: 550px) {
+            .img-mob {
+                display: block;
+            }
+            .img-desk {
+                display: none;
+            }
+        }
 
         h1 {
             color: $Light-Cyan;
